@@ -136,7 +136,7 @@ select {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+.submit {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -147,7 +147,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+.submit:hover {
     background-color: #45a049;
 }
 

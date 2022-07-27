@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> D- CLIC | Contact </title>
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/semantic.min.css">
     <link rel="icon" type="image/x-icon" href="/public/image/simple-cloud.png">
 </head>
 
@@ -49,32 +50,56 @@
 
             <body>
                 <h2>Notez la formation</h2>
+                <div class="ui main container" style="padding-top: 27rem">
+                    <% if (locals.flash && locals.flash.error) { %>
+                        <div class="ui negative message">
+                            <%= flash.error %>
+                        </div>
+                        <% } %>
+                            <% if (locals.flash && locals.flash.success) { %>
+                                <div class="ui positive message">
+                                    <%= flash.success %>
+                                </div>
+                                <% } %>
+                </div>
+
 
                 <div>
-                    <form action="/contact.html" method="post">
+                    <form action="/contact" method="post">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name...">
 
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
 
                         <label for="avis">Votre avis</label>
-                        <input type="text" id="avis" name="avis" placeholder="donnez votre avis sur la formation..">
+                        <input type="text" id="avis" name="avis" placeholder="donnez votre avis sur la formation...">
 
                         <label for="Note">Note</label>
-                        <input type="number" id="Note" name="note" min="1" max="5" placeholder="votre note ..">
+                        <input type="number" id="Note" name="note" min="1" max="5" placeholder="votre note ...">
 
                         <label for="formation">Formation</label>
                         <select id="formation" name="formation">
-					  <option value="Frontent">Frontend</option>
-					  <option value="Backend">Backend</option>
-					  <option value="UX-UI">Marketing</option>
+					  <option value="FrontEnd">Frontend</option>
+					  <option value="BackEnd">Backend</option>
+					  <option value="Marketing">Marketing</option>
 					  <option value="UX-UI">UX-UI</option>
 					</select>
 
-                        <input type="submit" value="Submit">
+                        <button type="submit" class="submit">Submit</button>
                     </form>
                 </div>
+                <script>
+                    const form = document.querySelector('form');
+                    const inputs = document.querySelectorAll('input');
+                    console.log(inputs)
+                    const select = document.getElementById('formation');
+                    console.log(select)
+
+                    form.addEventListener('submit', () => {
+
+                    })
+                </script>
 
             </body>
 
