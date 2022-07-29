@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> D- CLIC | Contact </title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <title>D- CLIC | Contact</title>
     <link rel="stylesheet" href="/public/css/semantic.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link rel="icon" type="image/x-icon" href="/public/image/simple-cloud.png">
 </head>
 
@@ -33,78 +33,57 @@
         <div class="banner">
 
             <div class="app-text">
-                <h1> D-CLIC <br> Venez nous voir </h1>
-                <p>Prenez contact avec nous. </p>
+                <h1>D-CLIC<br>Venez nous voir</h1>
+                <p>Prenez contact avec nous.</p>
                 <div class="play-btn">
                     <div class="play-btn-inner">
-
                     </div>
                 </div>
             </div>
 
             <div class="app-picture-contact">
                 <img src="./public/image/image_contact.jpg">
-
             </div>
 
+            <h2>Notez la formation</h2>
+            <div class="ui main">
+                <% if (locals.flash && locals.flash.error) { %>
+                    <div class="ui negative message">
+                        <%= flash.error %>
+                    </div>
+                    <% } %>
+                        <% if (locals.flash && locals.flash.success) { %>
+                            <div class="ui positive message submit">
+                                <%= flash.success %>
+                            </div>
+                            <% } %>
+            </div>
 
-            <body>
-                <h2>Notez la formation</h2>
-                <div class="ui main container" style="padding-top: 27rem">
-                    <% if (locals.flash && locals.flash.error) { %>
-                        <div class="ui negative message">
-                            <%= flash.error %>
-                        </div>
-                        <% } %>
-                            <% if (locals.flash && locals.flash.success) { %>
-                                <div class="ui positive message">
-                                    <%= flash.success %>
-                                </div>
-                                <% } %>
-                </div>
+            <div>
+                <form action="/contact" method="post">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name...">
 
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
 
-                <div>
-                    <form action="/contact" method="post">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                    <label for="avis">Votre avis</label>
+                    <input type="text" id="avis" name="avis" placeholder="Donnez votre avis sur la formation...">
 
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                    <label for="Note">Note</label>
+                    <input type="number" id="Note" name="note" min="1" max="5" placeholder="Votre note...">
 
-                        <label for="avis">Votre avis</label>
-                        <input type="text" id="avis" name="avis" placeholder="donnez votre avis sur la formation...">
-
-                        <label for="Note">Note</label>
-                        <input type="number" id="Note" name="note" min="1" max="5" placeholder="votre note ...">
-
-                        <label for="formation">Formation</label>
-                        <select id="formation" name="formation">
-					  <option value="FrontEnd">Frontend</option>
-					  <option value="BackEnd">Backend</option>
-					  <option value="Marketing">Marketing</option>
-					  <option value="UX-UI">UX-UI</option>
+                    <label for="formation">Formation</label>
+                    <select id="formation" name="formation">
+					  <option value="1">Frontend</option>
+					  <option value="2">Backend</option>
+					  <option value="3">Marketing</option>
+					  <option value="4">UX-UI</option>
 					</select>
 
-                        <button type="submit" class="submit">Submit</button>
-                    </form>
-                </div>
-                <script>
-                    const form = document.querySelector('form');
-                    const inputs = document.querySelectorAll('input');
-                    console.log(inputs)
-                    const select = document.getElementById('formation');
-                    console.log(select)
-
-                    form.addEventListener('submit', () => {
-
-                    })
-                </script>
-
-            </body>
-
-
-
+                    <button type="submit" class="submit">Submit</button>
+                </form>
+            </div>
 
         </div>
     </div>

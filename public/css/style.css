@@ -2,16 +2,22 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    background: #f5f5f7;
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* .container {
+    /* background: #f5f5f7; 
+} */
 
 .menu ul {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     margin: 80px;
 }
 
@@ -62,8 +68,8 @@ a:hover {
 
 .banner {
     width: 80%;
-    height: 70%;
-    top: 25%;
+    height: 30%;
+    top: 30%;
     left: 130px;
     position: absolute;
     color: rgb(19, 18, 18);
@@ -151,14 +157,18 @@ select {
     background-color: #45a049;
 }
 
-div {
+
+/* div {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-}
+} */
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+.flip-flex {
+    display: flex;
+    padding-top: 21rem;
+    margin-left: -150px;
+    justify-content: center;
 }
 
 .flip-box {
@@ -189,11 +199,29 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    font-size: small;
 }
 
 .flip-box-front {
     background-color: #bbb;
     color: black;
+    overflow: hidden;
+}
+
+.flip-box-front .note {
+    color: red;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.flip-box-front .author {
+    color: #0275d8;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 8px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .flip-box-back {

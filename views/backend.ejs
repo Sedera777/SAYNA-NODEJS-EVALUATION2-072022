@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> D- CLIC | BackEnd </title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/public/image/burn-cd.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="logo">
+                    <a href="/"><img src="./public/image/sayna.jpg"></a>
+                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/backend">BackEnd</a></li>
+                <li><a href="/frontend">FrontEnd</a></li>
+                <li><a href="/d-marketing">Marketing Digital</a></li>
+                <li><a href="/ui-ux">UX/UI</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- <li> <a href = "#" class="signup-btn"> <span> Sign Up </span> </a> </li> -->
+            </ul>
+
+        </div>
+
+        <div class="banner">
+            <div class="app-text">
+                <h1> D-CLIC <br> Venez coder le serveur avec nous </h1>
+                <p>Ici on étudie la gestion des bases de données <br> la logique de l’application, <br> les API, etc… </p>
+                <div class="play-btn">
+                    <div class="play-btn-inner">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-picture-backend">
+                <img src="./public/image/image_backend.jpg">
+
+            </div>
+
+
+        </div>
+        <div class="flip-flex">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Avis des utilisateurs sur le backend</h2>
+                        <% for(singleavis of avis) {%>
+                            <div>
+                                <p class="note">Note:
+                                    <%= singleavis.note %>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p class="author">Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Suite</h2>
+                        <% for(singleavis of avis1) {%>
+                            <div>
+                                <p>Note:
+                                    <%= singleavis.note %>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p>Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Avis des utilisateurs sur le backend</h2>
+                        <% for(singleavis of avis2) {%>
+                            <div>
+                                <p class="note">Note:
+                                    <%= singleavis.note %>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p class="author">Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Suite</h2>
+                        <% for(singleavis of avis3) {%>
+                            <div>
+                                <p>Note:
+                                    <%= singleavis.note %>
+                                </p>
+                                <%= singleavis.avis %><br> <br>
+                                    <p>Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
