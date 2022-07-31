@@ -7,12 +7,6 @@ class Avis {
             callback(result)
         })
     }
-    static all(query) {
-        pool.query(query, function(err, rows) {
-            if (err) throw err
-            return rows
-        })
-    }
 }
 
 module.exports = { Avis }

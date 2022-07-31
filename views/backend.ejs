@@ -55,7 +55,7 @@
                         <% for(singleavis of avis) {%>
                             <div>
                                 <p class="note">Note:
-                                    <%= singleavis.note %>
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
                                 </p>
                                 <%= singleavis.avis %> <br> <br>
                                     <p class="author">Author:
@@ -72,7 +72,7 @@
                         <% for(singleavis of avis1) {%>
                             <div>
                                 <p>Note:
-                                    <%= singleavis.note %>
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
                                 </p>
                                 <%= singleavis.avis %> <br> <br>
                                     <p>Author:
@@ -94,7 +94,7 @@
                         <% for(singleavis of avis2) {%>
                             <div>
                                 <p class="note">Note:
-                                    <%= singleavis.note %> <span>⭐</span>
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
                                 </p>
                                 <%= singleavis.avis %> <br> <br>
                                     <p class="author">Author:
@@ -111,7 +111,7 @@
                         <% for(singleavis of avis3) {%>
                             <div>
                                 <p>Note:
-                                    <%= singleavis.note %>
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
                                 </p>
                                 <%= singleavis.avis %><br> <br>
                                     <p>Author:
@@ -129,6 +129,7 @@
 
     </div>
 
+    <script src="../public/js/script.js"></script>
 </body>
 
 </html>

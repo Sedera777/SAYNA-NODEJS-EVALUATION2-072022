@@ -10,4 +10,8 @@ app.use('/public', express.static('public'))
 
 // Define Routes
 app.use(router)
+
+app.get('/', (req, res) => {
+    res.render('index')
+})
 app.listen(port, () => { console.log(`Server started on port ${port}`) })

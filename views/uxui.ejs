@@ -51,10 +51,38 @@
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h2>Avis des utilisateurs sur le ui/ux</h2>
+                        <h2>Avis des utilisateurs sur le ux/ui</h2>
+                        <% for(singleavis of avis) {%>
+                            <div>
+                                <p class="note">Note:
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p class="author">Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
                     </div>
                     <div class="flip-box-back">
                         <h2>Suite</h2>
+                        <% for(singleavis of avis1) {%>
+                            <div>
+                                <p>Note:
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p>Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
                     </div>
                 </div>
             </div>
@@ -62,28 +90,45 @@
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <h2>Avis des utilisateurs sur le ui/ux</h2>
-                    </div>
-                    <div class="flip-box-back">
-                        <h2>Suite</h2>
-                    </div>
-                </div>
-            </div>
+                        <h2>Avis des utilisateurs sur le ux/ui</h2>
+                        <% for(singleavis of avis2) {%>
+                            <div>
+                                <p class="note">Note:
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
+                                </p>
+                                <%= singleavis.avis %> <br> <br>
+                                    <p class="author">Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
 
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                    <div class="flip-box-front">
-                        <h2>Avis des utilisateurs sur le ui/ux</h2>
+
+                            </div>
+                            <% } %>
                     </div>
                     <div class="flip-box-back">
                         <h2>Suite</h2>
+                        <% for(singleavis of avis3) {%>
+                            <div>
+                                <p>Note:
+                                    <span class="n"><%= singleavis.note %></span> <span class="star"></span>
+                                </p>
+                                <%= singleavis.avis %><br> <br>
+                                    <p>Author:
+                                        <%= singleavis.firstname %>
+                                            <%= singleavis.lastname %>
+                                    </p>
+
+
+                            </div>
+                            <% } %>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-
+    <script src="../public/js/script.js"></script>
 </body>
 
 </html>

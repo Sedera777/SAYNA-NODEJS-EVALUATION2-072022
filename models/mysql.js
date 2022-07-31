@@ -7,6 +7,7 @@ const pool = mysql.createPool({
     database: process.env.DATABASE
 })
 
+
 const SelectAllElements = (query) => {
     return new Promise((resolve, reject) => {
         pool.query(query, (err, result) => {
